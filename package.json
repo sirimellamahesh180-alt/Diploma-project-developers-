@@ -1,0 +1,33 @@
+{
+  "name": "diploma-project-developers",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test:security": "node --test tests/security.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.81.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.553.0",
+    "next": "^15.5.6",
+    "razorpay": "^2.9.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "resend": "^6.4.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^22.19.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.22",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}
