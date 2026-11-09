@@ -8,3 +8,6 @@ node_modules
 # Generated files
 .netlify
 *.tsbuildinfo
+
+.agents/
+.netlify/
