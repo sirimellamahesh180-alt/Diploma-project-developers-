@@ -1,0 +1,3 @@
+import { guardRequest } from '@/lib/security';
+import {createAdminClient} from '@/lib/supabase/admin';import {requireAdmin} from '@/lib/auth';import {jsonError} from '@/lib/utils';
+export async function DELETE(req:Request,{params}:{params:Promise<{id:string}>}){const blocked=await guardRequest(req,'admin-write',30);if(blocked)return blocked;const auth=await requireAdmin();if(auth.error)return jsonError(auth.error,401);const {id}=await params;const db=createAdminClient();const {error}=await db.from('announcements').delete().eq('id',id);if(error)return jsonError('Unable to delete announcement.',500);return Response.json({ok:true})}
